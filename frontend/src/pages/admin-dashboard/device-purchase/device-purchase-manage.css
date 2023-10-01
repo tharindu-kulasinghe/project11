@@ -1,0 +1,253 @@
+/* Device Purchase Management Styles */
+
+.device-purchase-manage {
+  width: 100%;
+  padding: 24px;
+  background-color: var(--color-light-gray);
+}
+
+.device-purchase-manage-container {
+  margin: 0 auto;
+}
+
+.device-purchase-manage-header {
+  margin-bottom: 32px;
+}
+
+.device-purchase-manage-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin: 0 0 8px 0;
+}
+
+.device-purchase-manage-header p {
+  font-size: 1.1rem;
+  color: var(--color-gray);
+  margin: 0;
+}
+
+.device-purchase-manage-controls {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.search-box {
+  position: relative;
+  flex: 1;
+  min-width: 250px;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 12px 16px 12px 40px;
+  border: 1px solid var(--color-gray);
+  border-radius: var(--border-radius-base);
+  font-size: 1rem;
+  background-color: var(--color-white);
+}
+
+.search-box i {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-gray);
+}
+
+.filter-dropdown select {
+  padding: 12px 16px;
+  border: 1px solid var(--color-gray);
+  border-radius: var(--border-radius-base);
+  background-color: var(--color-white);
+  font-size: 1rem;
+  min-width: 150px;
+}
+
+.add-device-btn {
+  padding: 12px 24px;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  border-radius: var(--border-radius-base);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.3s;
+}
+
+.add-device-btn:hover {
+  background-color: var(--color-yellow);
+  color: var(--color-black);
+}
+
+.devices-table-container {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-base);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.devices-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 1000px;
+}
+
+.devices-table th {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 16px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.devices-table td {
+  padding: 16px;
+  border-bottom: 1px solid #eee;
+}
+
+.devices-table tr:hover {
+  background-color: #f8f9fa;
+}
+
+.device-id {
+  font-family: var(--font-family-base);
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--color-primary);
+}
+
+.user-info,
+.vehicle-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.user-name,
+.vehicle-title {
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.user-email,
+.vehicle-plate {
+  font-size: 0.85rem;
+  color: var(--color-gray);
+}
+
+.status-select {
+  padding: 6px 12px;
+  border-radius: var(--border-radius-base);
+  border: 1px solid var(--color-gray);
+  background-color: var(--color-white);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+
+.action-buttons {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.edit-btn,
+.delete-btn {
+  padding: 8px;
+  border: none;
+  border-radius: var(--border-radius-base);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.edit-btn {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.edit-btn:hover {
+  background-color: var(--color-yellow);
+  color: var(--color-black);
+}
+
+.delete-btn {
+  background-color: var(--color-red);
+  color: var(--color-white);
+}
+
+.delete-btn:hover {
+  background-color: #dc2626;
+}
+
+.error-state,
+.loading-state {
+  margin: 12px 0;
+  padding: 12px 16px;
+  background-color: #fef2f2;
+  color: #dc2626;
+  border-radius: var(--border-radius-base);
+  border: 1px solid #fecaca;
+}
+
+.no-devices {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--color-gray);
+}
+
+@media (max-width: 768px) {
+  .device-purchase-manage {
+    padding: 16px;
+  }
+
+  .devices-table-container {
+    position: relative;
+  }
+
+  .devices-table-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 100%;
+    background: linear-gradient(to left, var(--color-white), transparent);
+    pointer-events: none;
+    opacity: 0.8;
+  }
+
+  .devices-table {
+    font-size: 0.85rem;
+  }
+
+  .devices-table th,
+  .devices-table td {
+    padding: 12px 8px;
+    white-space: nowrap;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .user-info,
+  .vehicle-info {
+    min-width: 120px;
+  }
+
+  .status-select {
+    font-size: 0.8rem;
+    min-width: 80px;
+  }
+}

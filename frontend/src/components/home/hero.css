@@ -1,0 +1,266 @@
+.hero {
+    width: 100%;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hero-bg-color{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
+    opacity: 0.6;
+    position: absolute;
+}
+
+.hero-container {
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px;
+    height: auto;
+    position: relative;
+}
+
+.hero .hero-title h1 {
+    font-size: var(--font-size-xxxl);
+    font-family: var(--font-family-primary);
+    text-align: center;
+    color: white;
+}
+
+.hero .hero-title p {
+    font-size: var(--font-size-base);
+    text-align: center;
+    margin-top: 8px;
+    color: white;
+}
+
+/* hero search */
+.hero .search {
+    width: calc(100% - 200px);
+    height: auto;
+    margin: auto;
+    margin-top: 24px;
+    padding: 24px;
+    background-color: var(--color-white);
+    border-radius: var(--border-radius-base);
+    box-shadow: var(--box-shadow-base);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 12px;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+@media(max-width:992px) {
+
+    .hero .search {
+        grid-template-columns: 1fr 1fr;
+        width: calc(100% - 100px);
+    }
+}
+
+@media(max-width:576px) {
+
+    .hero .search {
+        grid-template-columns: 1fr;
+        width: calc(100%);
+    }
+}
+
+.hero .search .pickup-location {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.hero .search .pickup-location .input-with-icon {
+    position: relative;
+}
+
+.hero .search .pickup-location input {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius-base);
+    padding: 12px 40px 12px 12px;
+    /* extra right padding for icon */
+    border: 1px solid var(--color-gray);
+    margin-top: 8px;
+}
+
+.hero .search .pickup-location input::placeholder {
+    color: var(--color-gray);
+}
+
+/* suggestions dropdown */
+.hero .search .pickup-location .suggestions {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: calc(100% + 6px);
+    background: var(--color-white);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: var(--border-radius-base);
+    box-shadow: var(--box-shadow-base);
+    list-style: none;
+    margin: 0;
+    padding: 6px 0;
+    max-height: 220px;
+    overflow-y: auto;
+    z-index: 50;
+}
+
+.hero .search .pickup-location .suggestions li {
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+/* Position and style the custom calendar icon buttons */
+.hero .search .pickup-date .input-with-icon,
+.hero .search .return-date .input-with-icon {
+    position: relative;
+}
+
+.hero .search .pickup-date .calendar-icon,
+.hero .search .return-date .calendar-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(calc(-50% + 4px));
+    border: none;
+    background: transparent;
+    color: var(--color-secondary);
+    cursor: pointer;
+    padding: 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero .search .pickup-date .calendar-icon:hover,
+.hero .search .return-date .calendar-icon:hover {
+    color: var(--color-yellow);
+}
+
+.hero .search .pickup-location .suggestions li:hover,
+.hero .search .pickup-location .suggestions li.active {
+    background: rgba(0, 0, 0, 0.04);
+}
+
+.hero .search .pickup-location .location-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(calc(-50% + 4px));
+    border: none;
+    background: transparent;
+    color: var(--color-secondary);
+    cursor: pointer;
+    padding: 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero .search .pickup-location .location-icon:hover {
+    color: var(--color-yellow);
+}
+
+.hero .search .pickup-location .open-map {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: var(--font-size-base);
+    color: var(--color-secondary);
+    text-decoration: none;
+    transition: var(--transition-base);
+}
+
+.hero .search .pickup-location .open-map:hover {
+    color: var(--color-yellow);
+}
+
+.hero .search .pickup-location .open-map.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.hero .search .pickup-date {
+    width: 100%;
+    height: auto;
+}
+
+.hero .search .pickup-date input {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius-base);
+    padding: 12px 40px 12px 12px;
+    /* space for calendar icon */
+    border: 1px solid var(--color-gray);
+    margin-top: 8px;
+    accent-color: var(--color-secondary);
+    /* fallback where supported */
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: none;
+}
+
+.hero .search .pickup-date input:focus {
+    outline: none;
+    box-shadow: var(--box-shadow-base);
+}
+
+/* return date */
+.hero .search .return-date input {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius-base);
+    padding: 12px 40px 12px 12px;
+    /* space for calendar icon */
+    border: 1px solid var(--color-gray);
+    margin-top: 8px;
+    accent-color: var(--color-secondary);
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: none;
+}
+
+.hero .search .return-date input:focus {
+    outline: none;
+    box-shadow: var(--box-shadow-base);
+}
+
+/* Hide native WebKit date picker icon so only custom icon is visible */
+.hero .search .pickup-date input::-webkit-calendar-picker-indicator,
+.hero .search .return-date input::-webkit-calendar-picker-indicator {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* No hover effect needed once hidden */
+
+/* search button */
+.hero .search .search-button {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: baseline;
+}
+
+.hero .search .search-button button {
+    width: 100%;
+    margin-top: 24px;
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    border-radius: var(--border-radius-base);
+    padding: 12px;
+    border: none;
+    transition: var(--transition-base);
+    cursor: pointer;
+}
+
+.hero .search .search-button button:hover {
+    background-color: var(--color-yellow);
+    color: var(--color-black);
+}

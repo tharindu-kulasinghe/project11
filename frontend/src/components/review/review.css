@@ -1,0 +1,201 @@
+/* vehicle-details review*/
+
+.review{
+    width: 100%;
+    margin-top: 32px;
+}
+
+.review h1{
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-xl);
+    color: var(--black);
+}
+
+.review-list{
+    width: 100%;
+    display: block;
+    margin-top: 16px;
+}
+
+.review-item{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    box-shadow: var(--box-shadow-base);
+    border-radius: var(--border-radius-base);
+    background-color: var(--color-white);
+    margin-bottom: 16px;
+}
+
+.review-profile{
+    width: 50px;
+}
+
+.review-profile img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    border: 2px solid var(--color-yellow);
+
+}
+
+/* vehicle details reveiw content */
+
+.review-body{
+    width: calc(100% - (50px + 16px));
+    margin-left: 16px;
+}
+
+.review-content{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.review-details{
+    width: 100%;
+    display: flex;
+    
+}
+
+.review-name h2{
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-base);
+    color: var(--black);
+}
+
+.review-name ul li{
+    display: inline-block;
+    margin-top: 4px;
+}
+
+.review-name i{
+    color: var(--color-gray);
+}
+
+.review-name ul li.active i{
+    color: var(--color-yellow);
+}
+
+.review-date p{
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-sm);
+    color: var(--color-gray);
+}
+
+.review-text{
+    width: 100%;
+    margin-top: 8px;
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-base);
+    color: var(--color-gray);
+}
+
+@media(max-width:576px){
+
+    .review-item{
+        display: block;
+    }
+
+    .review-profile {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .review-body{
+        width: 100%;
+        margin: 0;
+        margin-top: 16px;
+    }
+
+    .review-content{
+        display: block;
+    }
+
+    .review-details{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .review-name h2{
+        text-align: center;
+    }
+
+    .review-date p{
+        margin-top: 4px;
+        text-align: center;
+    }
+
+    .review-name ul {
+        text-align: center;
+    }
+
+    .review-text{
+        text-align: center;
+    }
+}
+
+/* pagination */
+
+.review-pagination nav{
+    background-color: var(--color-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: none;
+    
+}
+
+
+
+/* Pagination list spacing */
+.review-pagination .MuiPagination-ul {
+  gap: 8px;
+}
+
+/* Pagination item base */
+.review-pagination .MuiPaginationItem-root {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-sm);
+  color: var(--color-black);
+  border: 1px solid var(--color-gray);
+  border-radius: var(--border-radius-base);
+  min-width: 36px;
+  height: 36px;
+}
+
+/* Selected state */
+.review-pagination .MuiPaginationItem-root.Mui-selected {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  border-color: var(--color-black);
+}
+
+/* Hover state */
+.review-pagination .MuiPaginationItem-root:hover {
+  background-color: var(--color-light-gray);
+}
+
+/* Disabled state */
+.review-pagination .MuiPaginationItem-root.Mui-disabled {
+  opacity: 0.5;
+}
+
+/* Icons and ellipsis */
+.review-pagination .MuiPaginationItem-ellipsis,
+.review-pagination .MuiPaginationItem-icon {
+  color: var(--color-black);
+}
+
+/* Responsive tweaks for small screens */
+@media (max-width: 576px) {
+  .review-pagination .MuiPaginationItem-root {
+    min-width: 32px;
+    height: 32px;
+    font-size: 12px;
+  }
+}

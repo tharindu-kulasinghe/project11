@@ -1,0 +1,22 @@
+.title{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.title-container{
+    height: auto;
+}
+
+.title h1{
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-xxl);
+    text-align: center;
+}
+
+.title p{
+    font-family: var(--font-family-secondary);
+    margin-top: 8px;
+    color: var(--color-gray);
+    text-align: center;
+}

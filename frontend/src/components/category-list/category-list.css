@@ -1,0 +1,27 @@
+.category-list{
+    width: 100%;
+}
+
+.category-list-container{
+    width: 100%;
+    
+}
+
+.category-list-item{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    
+}
+
+@media (max-width: 992px) {
+    .category-list-item{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .category-list-item{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

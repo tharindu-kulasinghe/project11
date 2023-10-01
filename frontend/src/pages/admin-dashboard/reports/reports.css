@@ -1,0 +1,341 @@
+/* Reports Styles */
+
+.reports {
+  width: 100%;
+  padding: 24px;
+  background-color: var(--color-light-gray);
+}
+
+.reports-container {
+  margin: 0 auto;
+}
+
+.reports-header {
+  margin-bottom: 32px;
+}
+
+.reports-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin: 0 0 8px 0;
+}
+
+.reports-header p {
+  font-size: 1.1rem;
+  color: var(--color-gray);
+  margin: 0;
+}
+
+.reports-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.report-filters {
+  display: flex;
+  gap: 24px;
+  align-items: end;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.filter-group label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.filter-group select {
+  padding: 12px 16px;
+  border: 1px solid var(--color-gray);
+  border-radius: var(--border-radius-base);
+  background-color: var(--color-white);
+  font-size: 1rem;
+  min-width: 150px;
+}
+
+.generate-report-btn {
+  padding: 12px 24px;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  border-radius: var(--border-radius-base);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.3s;
+}
+
+.generate-report-btn:hover {
+  background-color: var(--color-yellow);
+  color: var(--color-black);
+}
+
+/* Overview Reports */
+.overview-reports {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+}
+
+.metric-card {
+  background-color: var(--color-white);
+  padding: 24px;
+  border-radius: var(--border-radius-base);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.metric-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  font-size: 1.5rem;
+}
+
+.metric-info h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin: 0 0 4px 0;
+}
+
+.metric-info p {
+  font-size: 0.9rem;
+  color: var(--color-gray);
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.summary-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.summary-card {
+  background-color: var(--color-white);
+  padding: 24px;
+  border-radius: var(--border-radius-base);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.summary-card h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin: 0 0 12px 0;
+}
+
+.summary-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin: 0;
+}
+
+/* Bookings Reports */
+.bookings-reports {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.chart-section h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin: 0 0 16px 0;
+}
+
+.chart-placeholder {
+  background-color: var(--color-white);
+  padding: 24px;
+  border-radius: var(--border-radius-base);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  height: 300px;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+
+.chart-bars {
+  display: flex;
+  gap: 16px;
+  align-items: end;
+  height: 200px;
+}
+
+.chart-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.bar {
+  width: 40px;
+  background-color: var(--color-primary);
+  border-radius: 4px 4px 0 0;
+  transition: height 0.3s;
+}
+
+.bar-label {
+  font-size: 0.8rem;
+  color: var(--color-gray);
+}
+
+.monthly-summary h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin: 0 0 16px 0;
+}
+
+.monthly-table {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-base);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.monthly-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.monthly-table th {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 16px;
+  text-align: left;
+  font-weight: 600;
+}
+
+.monthly-table td {
+  padding: 16px;
+  border-bottom: 1px solid #eee;
+}
+
+/* Vehicles Reports */
+.vehicles-reports {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.utilization-section h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin: 0 0 16px 0;
+}
+
+.utilization-list {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-base);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.utilization-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 24px;
+  border-bottom: 1px solid #eee;
+}
+
+.utilization-item:last-child {
+  border-bottom: none;
+}
+
+.utilization-info {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.vehicle-name {
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.utilization-rate {
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.utilization-bar {
+  flex: 2;
+  height: 8px;
+  background-color: #eee;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.utilization-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-primary));
+  transition: width 0.3s;
+}
+
+.booking-count {
+  font-size: 0.9rem;
+  color: var(--color-gray);
+  min-width: 80px;
+  text-align: right;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .reports {
+    padding: 16px;
+  }
+
+  .reports-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .report-filters {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .summary-cards {
+    grid-template-columns: 1fr;
+  }
+}

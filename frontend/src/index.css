@@ -1,0 +1,134 @@
+@import url('./styles/padding.css');
+@import url('./styles/margin.css');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+
+:root{
+  --color-primary:#08003D;
+  --color-secondary:#711400;
+  --color-yellow:#FFD700;
+  --color-white:#fff;
+  --color-light-gray:#f5f5f5;
+  --color-gray:#868686;
+  --color-black: rgb(30, 30, 30);
+  --color-red: #FF0000;
+}
+
+:root{
+  --font-family-primary:'Poppins', sans-serif;
+  --font-family-secondary:'Poppins', sans-serif;
+}
+
+:root{
+  --font-size-xs:12px;
+  --font-size-sm:14px;
+  --font-size-base:16px;
+  --font-size-lg:18px;
+  --font-size-xl:20px;
+  --font-size-xxl: 32px;
+  --font-size-xxxl:48px;
+}
+
+:root{
+  --font-weight-bold: 600;
+  --font-weight-normal: 400;
+}
+
+:root{
+  --border-radius-base:8px;
+  --border-radius-lg:12px;
+}
+
+:root{
+  --box-shadow-base:0px 0px 8px rgba(0, 0, 0, 0.1);
+  --box-shadow-lg:0px 0px 16px rgba(0, 0, 0, 0.1);
+}
+
+:root{
+  --transition-base:0.2s ease-in-out;
+  --transition-lg:0.5s ease-in-out;
+}
+
+
+.container{
+    width: 1200px;
+    margin: auto;
+}
+
+@media (max-width: 1240px) {
+    .container{
+        width: 100%;
+        padding: 0 20px;
+    }
+}
+
+
+.btn-primary,
+.btn-secondary {
+    padding: 12px 32px;
+    border: none;
+    border-radius: var(--border-radius-base);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition-base);
+    font-family: var(--font-family-base);
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    min-width: 120px;
+}
+
+.btn-primary {
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+}
+
+.btn-primary:hover:not(:disabled) {
+    background-color: var(--color-yellow);
+    color: var(--color-black);
+}
+
+.btn-primary:disabled {
+    background-color: var(--color-gray);
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+}
+
+.btn-secondary:hover:not(:disabled) {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.btn-secondary:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn-primary,
+    .btn-secondary {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+}

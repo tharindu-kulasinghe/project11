@@ -1,0 +1,279 @@
+/* Manage Users Styles */
+
+.manage-users {
+  width: 100%;
+  padding: 24px;
+  background-color: var(--color-light-gray);
+}
+
+.manage-users-container {
+  margin: 0 auto;
+}
+
+.manage-users-header {
+  margin-bottom: 32px;
+}
+
+.manage-users-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin: 0 0 8px 0;
+}
+
+.manage-users-header p {
+  font-size: 1.1rem;
+  color: var(--color-gray);
+  margin: 0;
+}
+
+.manage-users-controls {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.search-box {
+  position: relative;
+  flex: 1;
+  min-width: 250px;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 12px 16px 12px 40px;
+  border: 1px solid var(--color-gray);
+  border-radius: var(--border-radius-base);
+  font-size: 1rem;
+  background-color: var(--color-white);
+}
+
+.search-box i {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-gray);
+}
+
+.filter-dropdown select {
+  padding: 12px 16px;
+  border: 1px solid var(--color-gray);
+  border-radius: var(--border-radius-base);
+  background-color: var(--color-white);
+  font-size: 1rem;
+  min-width: 150px;
+}
+
+.add-user-btn {
+  padding: 12px 24px;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  border-radius: var(--border-radius-base);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.3s;
+}
+
+.add-user-btn:hover {
+  background-color: var(--color-yellow);
+  color: var(--color-black);
+}
+
+.users-table-container {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-base);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px;
+}
+
+.users-table th {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 16px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.users-table td {
+  padding: 16px;
+  border-bottom: 1px solid #eee;
+}
+
+.users-table tr:hover {
+  background-color: #f8f9fa;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  font-size: 1.2rem;
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-name {
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.email-cell {
+  color: var(--color-gray);
+}
+
+.role-select {
+  padding: 6px 12px;
+  border-radius: var(--border-radius-base);
+  border: 1px solid var(--color-gray);
+  background-color: var(--color-white);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.role-select.user {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.role-select.admin {
+  color: var(--color-red);
+  border-color: var(--color-red);
+}
+
+.status-badge {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.edit-btn {
+  padding: 8px;
+  border: none;
+  border-radius: var(--border-radius-base);
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.edit-btn:hover {
+  background-color: var(--color-yellow);
+  color: var(--color-black);
+}
+
+.status-toggle-btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: var(--border-radius-base);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.status-toggle-btn.active {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.status-toggle-btn.suspended {
+  background-color: var(--color-red);
+  color: var(--color-white);
+}
+
+.delete-btn {
+  padding: 8px;
+  border: none;
+  border-radius: var(--border-radius-base);
+  background-color: var(--color-red);
+  color: var(--color-white);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.delete-btn:hover {
+  background-color: #dc2626;
+}
+
+.no-users {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--color-gray);
+}
+
+.no-users p {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+/* Enhanced responsive scrolling for users table */
+@media (max-width: 768px) {
+  .users-table-container {
+    position: relative;
+  }
+
+  .users-table-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 100%;
+    background: linear-gradient(to left, var(--color-white), transparent);
+    pointer-events: none;
+    opacity: 0.8;
+  }
+
+  .users-table {
+    font-size: 0.85rem;
+  }
+
+  .users-table th,
+  .users-table td {
+    padding: 12px 8px;
+    white-space: nowrap;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+    gap: 4px;
+  }
+}

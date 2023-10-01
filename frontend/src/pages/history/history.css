@@ -1,0 +1,119 @@
+/* History Page Styles */
+
+.history {
+    width: 100%;
+    padding: 32px 0;
+}
+
+.history-container {
+    width: 100%;
+    margin: 0 auto;
+    background-color: var(--color-white);
+    border-radius: var(--border-radius-base);
+    box-shadow: var(--box-shadow-base);
+    overflow: hidden;
+}
+
+.history-header {
+    width: 100%;
+    padding: 32px;
+    text-align: center;
+    border-bottom: 1px solid var(--color-light-gray);
+}
+
+.history-header h1 {
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-xxl);
+    color: var(--color-black);
+    margin-bottom: 8px;
+}
+
+.history-header p {
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-base);
+    color: var(--color-gray);
+}
+
+.history-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 32px;
+    border-bottom: 1px solid var(--color-light-gray);
+    gap: 16px;
+}
+
+.history-filters,
+.history-sorts {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.history-filters label,
+.history-sorts label {
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-sm);
+    color: var(--color-black);
+    font-weight: var(--font-weight-bold);
+}
+
+.history-filters select,
+.history-sorts select {
+    padding: 8px 12px;
+    border: 1px solid var(--color-gray);
+    border-radius: var(--border-radius-base);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-sm);
+    background-color: var(--color-white);
+    cursor: pointer;
+}
+
+.history-list {
+    padding: 32px;
+}
+
+.history-empty {
+    text-align: center;
+    padding: 48px;
+    color: var(--color-gray);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-base);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .history-controls {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+    }
+
+    .history-filters,
+    .history-sorts {
+        justify-content: space-between;
+    }
+
+    .history-list {
+        padding: 16px;
+    }
+}
+
+@media (max-width: 576px) {
+    .history-header {
+        padding: 16px;
+    }
+
+    .history-header h1 {
+        font-size: var(--font-size-xl);
+    }
+
+    .history-controls {
+        padding: 16px;
+    }
+
+    .history-filters select,
+    .history-sorts select {
+        flex: 1;
+    }
+}

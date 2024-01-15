@@ -1,0 +1,101 @@
+.cars-section {
+    margin-top: 60px;
+}
+
+.cars-section .container {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.cars-section .filter {
+    flex-basis: 300px;
+    position: sticky;
+    top: 120px;
+    border: 1px solid #ccc;
+    padding: 1.5rem;
+    border-radius: 5px;
+}
+
+.filter-header {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main-color);
+    color: white;
+    border-radius: var(--border-radius);
+    margin-bottom: 20px;
+}
+
+.filter-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.filter-content-item h4 {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.filter-input select,
+.filter-input input {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.cars-list-wrapper {
+    flex: 1;
+}
+
+.filter-toggle-btn {
+    display: none;
+    /* Hidden by default */
+    gap: 0.5rem;
+}
+
+.filter-arrow {
+    transition: transform 0.3s ease;
+}
+
+.filter-arrow.open {
+    transform: rotate(180deg);
+}
+
+@media (max-width: 992px) {
+    .cars-section .container {
+        flex-direction: column;
+    }
+
+    .cars-section .filter {
+        display: none;
+        /* Hide filter by default on mobile */
+        position: static;
+        width: 100%;
+        flex-basis: auto;
+    }
+
+    .cars-section .filter.filter-visible {
+        display: block;
+        /* Show filter when toggled */
+    }
+
+    .filter-toggle-btn {
+        display: flex;
+        /* Show button on mobile */
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        background-color: var(--main-color);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 1.2rem;
+        cursor: pointer;
+    }
+}
